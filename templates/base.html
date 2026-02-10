@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduManage Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<header class="topbar">
+    <div class="brand">
+        🎓 EduManage <span>Pro</span>
+    </div>
+    <nav class="nav-links">
+        <a href="/dashboard" class="active">Dashboard</a>
+        <a href="/add">Add Student</a>
+        <a href="/logout" class="logout">Logout</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main class="main-container">
+    {% with messages = get_flashed_messages() %}
+      {% for msg in messages %}
+        <div class="alert-success">{{ msg }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    © 2026 EduManage Pro · Enterprise Student Management System
+</footer>
+
+</body>
+</html>
+

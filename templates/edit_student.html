@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card form-card">
+        <h2>Edit Student</h2>
+        <p class="subtitle">Update student academic & contact details</p>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="form-grid">
+
+                <!-- Roll Number -->
+                <div class="form-group">
+                    <label>Roll Number</label>
+                    <input type="text" name="roll" value="{{ student.roll_no }}" readonly>
+                </div>
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label>Student Name</label>
+                    <input type="text" name="name" value="{{ student.name }}" required>
+                </div>
+
+                <!-- Department -->
+                <div class="form-group">
+                    <label>Department</label>
+                    <select name="department" required>
+                        <option value="CSE" {% if student.department == "CSE" %}selected{% endif %}>CSE</option>
+                        <option value="ECE" {% if student.department == "ECE" %}selected{% endif %}>ECE</option>
+                        <option value="ME" {% if student.department == "ME" %}selected{% endif %}>Mechanical</option>
+                        <option value="CE" {% if student.department == "CE" %}selected{% endif %}>Civil</option>
+                        <option value="EEE" {% if student.department == "EEE" %}selected{% endif %}>EEE</option>
+                    </select>
+                </div>
+
+                <!-- Course -->
+                <div class="form-group">
+                    <label>Course</label>
+                    <select name="course" required>
+                        <option value="B.Tech" {% if student.course == "B.Tech" %}selected{% endif %}>B.Tech</option>
+                        <option value="M.Tech" {% if student.course == "M.Tech" %}selected{% endif %}>M.Tech</option>
+                        <option value="BCA" {% if student.course == "BCA" %}selected{% endif %}>BCA</option>
+                        <option value="MCA" {% if student.course == "MCA" %}selected{% endif %}>MCA</option>
+                    </select>
+                </div>
+
+                <!-- Year -->
+                <div class="form-group">
+                    <label>Year</label>
+                    <select name="year" required>
+                        <option value="1" {% if student.year == 1 %}selected{% endif %}>1</option>
+                        <option value="2" {% if student.year == 2 %}selected{% endif %}>2</option>
+                        <option value="3" {% if student.year == 3 %}selected{% endif %}>3</option>
+                        <option value="4" {% if student.year == 4 %}selected{% endif %}>4</option>
+                    </select>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" value="{{ student.email }}">
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" name="phone" value="{{ student.phone }}">
+                </div>
+
+                <!-- Status -->
+                <div class="form-group">
+                    <label>Status</label>
+                    <select name="status">
+                        <option value="Active" {% if student.status == "Active" %}selected{% endif %}>Active</option>
+                        <option value="Graduated" {% if student.status == "Graduated" %}selected{% endif %}>Graduated</option>
+                        <option value="Dropped" {% if student.status == "Dropped" %}selected{% endif %}>Dropped</option>
+                    </select>
+                </div>
+
+                <!-- Profile Photo -->
+                <div class="form-group">
+                    <label>Profile Photo</label>
+                    <input type="file" name="photo" accept="image/*">
+
+                    {% if student.photo %}
+                        <img
+                            src="{{ url_for('static', filename=student.photo) }}"
+                            class="profile-img"
+                            style="margin-top:10px;"
+                            alt="Profile Photo"
+                        >
+                    {% endif %}
+                </div>
+
+                <!-- Document -->
+                <div class="form-group">
+                    <label>Document (PDF / Image)</label>
+                    <input type="file" name="document" accept=".pdf,image/*">
+
+                    {% if student.document %}
+                        <p style="margin-top:8px;">
+                            <a href="{{ url_for('static', filename=student.document) }}" target="_blank">
+                                📄 View current document
+                            </a>
+                        </p>
+                    {% endif %}
+                </div>
+
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Update Student</button>
+                <a href="{{ url_for('dashboard') }}" class="btn-secondary">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
