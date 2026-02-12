@@ -1,18 +1,52 @@
+# -----------------------------
 # Python
+# -----------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Virtual environment
 venv/
 
-# Database
+# -----------------------------
+# Flask / Database
+# -----------------------------
 *.db
-
-# Environment variables
+instance/
 .env
 
-# OS
+# -----------------------------
+# Terraform
+# -----------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# -----------------------------
+# AWS
+# -----------------------------
+*.pem
+.aws/
+
+# -----------------------------
+# Docker
+# -----------------------------
+*.log
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+
+# -----------------------------
+# OS Files
+# -----------------------------
 .DS_Store
 Thumbs.db
