@@ -24,6 +24,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # -----------------------------
+# Create instance folder for SQLite
+# -----------------------------
+RUN mkdir -p /app/instance
+
+# -----------------------------
 # Expose Flask port
 # -----------------------------
 EXPOSE 5000
@@ -32,3 +37,4 @@ EXPOSE 5000
 # Run Flask app
 # -----------------------------
 CMD ["python", "app.py"]
+
