@@ -42,13 +42,21 @@ student-management-flask/
 ├── Jenkinsfile
 └── README.md
 
+
 Screenshots
+
 
 <img width="1920" height="938" alt="Screenshot (1678)" src="https://github.com/user-attachments/assets/3b0e2e4b-7acd-499a-ad8b-84563e725406" />
 
+
+
 <img width="1920" height="946" alt="Screenshot (1679)" src="https://github.com/user-attachments/assets/2b7cfe0c-00ad-42b7-a345-e07c0f08611d" />
 
+
+
 <img width="1920" height="954" alt="Screenshot (1680)" src="https://github.com/user-attachments/assets/5435b8a6-c603-445e-8f29-6ed4859930d4" />
+
+
 
 <img width="1920" height="919" alt="Screenshot (1681)" src="https://github.com/user-attachments/assets/1904ee25-fc09-41e9-b904-59aa49a6106b" />
 
@@ -58,6 +66,7 @@ Screenshots
 
 
  Features
+ 
 
 - Admin Authentication
 - Student CRUD Operations
