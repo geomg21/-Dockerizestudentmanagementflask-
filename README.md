@@ -33,13 +33,21 @@ Developer → GitHub → Jenkins (CI/CD) → Docker → AWS EC2 → Prometheus �
 
 
 student-management-flask/
+
 ├── app.py
+
 ├── templates/
+
 ├── static/
+
 ├── docker/Dockerfile
+
 ├── terraform/
+
 ├── monitoring/
+
 ├── Jenkinsfile
+
 └── README.md
 
 
