@@ -7,7 +7,7 @@ EduManage Pro is a Flask-based Student Management System deployed using a comple
  Live Application
 
 🔗 http://13.233.237.42:5000  
- (Update EC2 IP if changed)
+
 
 
 
@@ -60,7 +60,7 @@ student-management-flask/
 
 
 
-Geo Mathew George
+
 
 GitHub: https://github.com/geomg21
 
