@@ -93,4 +93,3 @@ Screenshots
 
 GitHub: https://github.com/geomg21
 
-LinkedIn: https://www.linkedin.com/in/geo-mathew-george-27a857314
