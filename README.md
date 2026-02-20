@@ -58,79 +58,10 @@ student-management-flask/
 
 ---
 
- Docker
 
-
-docker build -t student-management-app .
-docker run -d -p 5000:5000 student-management-app
- Terraform
-
-Provisioned Resources:
-
-VPC
-
-Public Subnet
-
-Internet Gateway
-
-Route Table
-
-Security Group
-
-EC2 Instance (Ubuntu)
-
-Key Pair
-
-Docker Installation via User Data
-
-Public IP Assignment
-
-terraform init
-terraform plan
-terraform apply
-terraform destroy
-
-CI/CD Pipeline
-
-Every Git push triggers:
-
-Code checkout
-
-Docker image build
-
-Deployment to EC2
-
-Automatic container restart
-
-Pipeline defined in Jenkinsfile.
-
-Monitoring
-
-Monitoring stack deployed via Docker Compose.
-
-Service	Port
-Prometheus	9090
-Grafana	3000
-Node Exporter	9100
-cd monitoring
-docker compose up -d
-
-
-Security
-
-Admin-only access
-
-AWS Security Groups
-
-SSH Key Pair authentication
-
-Infrastructure isolation via VPC
-
-Container isolation via Docker
-
- Author
 
 Geo Mathew George
+
 GitHub: https://github.com/geomg21
 
 LinkedIn: https://www.linkedin.com/in/geo-mathew-george-27a857314
